@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kevin Kiprono | Aspiring Full Stack Developer</title>
+  <link rel="stylesheet" href="style.css">
+  
+  <style>
+    /* GLOBAL STYLES */
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f5f5f5;
+      color: #333;
+      margin: 0;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    /* HEADER */
+    header {
+      background-color: #2d3033;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    header p {
+      margin: 5px 0 0 0;
+      font-weight: 400;
+      font-size: 1.1em;
+    }
+
+    /* NAVIGATION */
+    nav {
+      background-color: #e0e0e0;
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #004080;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* SECTIONS */
+    section {
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 40px 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    section h2 {
+      color: #004080;
+      margin-bottom: 20px;
+    }
+
+    /* BIO SECTION */
+    #bio {
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 60px 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      background-image: url('https://images.unsplash.com/photo-1610563166150-b34df4f3bcd6?q=80&w=1076&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      color: #fff;
+      text-align: center;
+    }
+
+    /* Semi-transparent overlay for readability */
+    .bio-overlay {
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 40px 20px;
+      border-radius: 8px;
+    }
+
+    #bio h2, #bio p {
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+    }
+
+    .bio-photo {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 3px solid #fff;
+      object-fit: cover;
+      margin-top: 20px;
+    }
+
+    /* DROPDOWN BUTTON STYLING */
+    .dropdown-btn {
+      background-color: #004080;
+      color: white;
+      padding: 10px 20px;
+      width: 100%;
+      text-align: left;
+      border: none;
+      cursor: pointer;
+      outline: none;
+      font-size: 1.1em;
+      margin: 10px 0;
+      border-radius: 5px;
+    }
+
+    .dropdown-btn:hover {
+      background-color: #0059b3;
+    }
+
+    /* HIDDEN CONTENT */
+    .dropdown-content {
+      display: none;
+      padding: 15px 0;
+    }
+
+    /* Show content when active */
+    .active + .dropdown-content {
+      display: block;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #004080;
+      color: #fff;
+    }
+
+    .linkedin-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 10px;
+      padding: 8px 15px;
+      background-color: #0077b5;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: 500;
+      transition: background-color 0.3s ease;
+    }
+
+    .linkedin-btn:hover {
+      background-color: #005582;
+    }
+
+    .linkedin-icon {
+      width: 20px;
+      height: 20px;
+    }
+
+    iframe, embed {
+      max-width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h1>Kevin Kiprono</h1>
+    <p>Student Full Stack Developer</p>
+  </header>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <a href="#bio">Bio</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#elevator">Elevator Pitch</a>
+  </nav>
+
+  <!-- BIO SECTION -->
+  <section id="bio">
+    <div class="bio-overlay">
+      <h2>Bio</h2>
+      <p>
+        Hello! I am Kevin Kiprono, an aspiring full stack developer with a passion for creating efficient, user-friendly web applications.
+      </p>
+      <img src="bio-photo.jpg" alt="Kevin Kiprono" class="bio-photo">
+    </div>
+  </section>
+
+  <!-- PORTFOLIO SECTION WITH DROPDOWN BUTTONS -->
+  <section id="portfolio">
+    <h2>Portfolio</h2>
+
+    <!-- Phase 2 Project Video -->
+    <button class="dropdown-btn">Phase 2 Project Video</button>
+    <div class="dropdown-content">
+      <iframe width="560" height="315" 
+              src="https://www.youtube.com/embed/-eYmuNI5ezs" 
+              frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <!-- Phase 2 Project Slide Deck -->
+    <button class="dropdown-btn">Phase 2 Project Slide Deck (.pdf)</button>
+    <div class="dropdown-content">
+      <embed src="https://docs.google.com/document/d/16R4vOhTJckpMMOZRqweaRDr62Les7kmR/preview" 
+             type="application/pdf" width="100%" height="600px">
+    </div>
+  </section>
+
+  <!-- ELEVATOR PITCH PLACEHOLDER -->
+  <section id="elevator">
+    <h2>Elevator Pitch</h2>
+    <p>This section will host my Elevator Pitch video in the future.</p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 Kevin Kiprono | Aspiring Full Stack Developer</p>
+    <a href="https://linkedin.com/in/kevin-kiprono" target="_blank" class="linkedin-btn" aria-label="LinkedIn Profile">
+      <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn Icon" class="linkedin-icon">
+      Connect on LinkedIn
+    </a>
+  </footer>
+
+  <!-- DROPDOWN SCRIPT -->
+  <script>
+    const dropdowns = document.querySelectorAll(".dropdown-btn");
+    dropdowns.forEach(btn => {
+      btn.addEventListener("click", () => {
+        dropdowns.forEach(b => {
+          if(b !== btn) b.classList.remove("active");
+        });
+        btn.classList.toggle("active");
+      });
+    });
+  </script>
+
+</body>
+</html>
